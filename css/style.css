@@ -1,0 +1,22 @@
+html {
+    background-color: black;
+    color: white;
+}
+#abs{
+    position: absolute;
+    left: 40%;
+    text-align: center;
+}
+#why{
+    display: none;
+    left: 40%;
+    text-align: center;
+}
+iframe{
+    width: 33vw; 
+    height: 18.75vw;
+}
+
+.Intro{
+    font-size: larger;
+}
