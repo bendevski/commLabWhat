@@ -9,6 +9,7 @@ html {
 }
 #why{
     display: none;
+    position: absolute;
     left: 40%;
     text-align: center;
 }
