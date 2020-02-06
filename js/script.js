@@ -207,16 +207,21 @@ function okay(){
     let okay = new Audio("Sound/okay.mp3");
     okay.play();
 }
+function yup(){
+    let okay = new Audio("Sound/yup.mp3");
+    okay.play();
+}
 function itHasBegun(){
     setTimeout(theyDidIt,3700);
     setTimeout(why,9000);
     setTimeout(blaster1,13000);
     setTimeout(blaster2,17000);
-    setTimeout(okay,22000);
+    setTimeout(okay,21000);
     setTimeout(dude, 25000);
     setTimeout(blaster1,27000);
-    setTimeout(adele, 32000);
-    setTimeout(stop, 38000);
+    setTimeout(yup, 30000);
+    setTimeout(adele, 34000);
+    setTimeout(stop, 39000);
 
     setTimeout(function(){stopColors=setInterval(function(){
         document.getElementById('whatHaveIDone').style.backgroundColor = "rgb(" + randBetween(0,255) + "," + randBetween(0,255) + "," + randBetween(0,255) + ")";
