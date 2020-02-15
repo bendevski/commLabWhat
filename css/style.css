@@ -108,8 +108,12 @@ body {
     left: 50vw;
     /* Move 50% from left */
     transform: translateX(-50%);
-    font-size: 2em;
+    font-size: 1.3em;
     max-height: 30vh;
+}
+
+#abs * {
+    margin: 10px;
 }
 
 #why {
@@ -123,7 +127,7 @@ body {
     left: 50%;
     /* Move 50% from left */
     transform: translateX(-50%);
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 iframe {
