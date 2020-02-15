@@ -2,8 +2,9 @@ const RIGHT = 0;
 const UP = 1;
 const LEFT = 2;
 const DOWN = 3;
-const screenHeight = window.screen.height;
-const screenWidth = window.screen.width;
+
+let screenHeight;
+let screenWidth;
 var player;
 var audio;
 let stopColors;
@@ -20,6 +21,9 @@ function waw() {
     //code from Youtube Iframe Player API page
     //technically just loading the api, putting the normal
     //script before the asynchronous call
+    const bod = document.getElementById("body");
+    screenHeight = bod.offsetHeight;
+    screenWidth = bod.offsetWidth;
     console.log("Hao")
     let tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
@@ -125,10 +129,10 @@ function theyDidIt() {
         else if (player.getCurrentTime() > 6.2) degree += 1;
 
         if (done) {
-            let exp = document.getElementById("explosion");
+            let exp = document.getElementById("explosion")
+            exp.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
+            exp.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
             exp.style.display = "inline-block";
-            x.style.marginLeft = screenWidth / 2 - 0.17 * screenWidth + "px";
-            x.style.marginTop = screenHeight / 2 - ((0.1875 * screenWidth) / 2) + "px";
             x.style.transform = "rotate(" + degree + "deg)";
             return;
         }
@@ -156,8 +160,8 @@ function onYouTubeIframeAPIReady() {
         }
     });
     let x = document.getElementById('player');
-    x.style.marginLeft = screenWidth / 2 - 0.17 * screenWidth + "px";
-    x.style.marginTop = screenHeight / 2 - ((0.1875 * screenWidth) / 2) + "px";
+    x.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
+    x.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
 }
 
 function leggo(e) {
@@ -202,8 +206,9 @@ function Prep() {
 
     function positionExplosion() {
         let x = document.getElementById("explosion");
-        x.style.marginLeft = screenWidth / 2 - 0.17 * screenWidth + "px";
-        x.style.marginTop = screenHeight / 2 - ((0.1875 * screenWidth) / 2) + "px";
+
+        x.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
+        x.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
     }
 
     function enableMedia() {

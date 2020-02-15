@@ -3,6 +3,11 @@ html {
     color: white;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 #media {
     display: none;
     position: absolute;
@@ -100,7 +105,7 @@ html {
     /* For text center */
     position: absolute;
     /* Position absolute */
-    left: 50%;
+    left: 50vw;
     /* Move 50% from left */
     transform: translateX(-50%);
     font-size: 2em;
