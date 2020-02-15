@@ -98,8 +98,8 @@ body {
 }
 
 #abs {
-    position: absolute;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     /* Display inline block */
     text-align: center;
     /* For text center */
@@ -109,6 +109,7 @@ body {
     /* Move 50% from left */
     transform: translateX(-50%);
     font-size: 2em;
+    max-height: 30vh;
 }
 
 #why {
@@ -126,6 +127,7 @@ body {
 }
 
 iframe {
-    width: 33vw;
-    height: 18.75vw;
+    position: absolute;
+    width: 22vw;
+    height: 12.5vw;
 }

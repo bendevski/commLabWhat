@@ -96,20 +96,20 @@ function theyDidIt() {
         xpos += xvel * 1.4;
         ypos += yvel * 1.4;
 
-        if (xpos + 0.33 * screenWidth > screenWidth) {
+        if (xpos + 0.18 * screenWidth > screenWidth) {
             xpos = 0;
             if (Math.random() > 0.7) bigStart = 0;
         }
         if (xpos < 0) {
-            xpos = screenWidth - 0.34 * screenWidth;
+            xpos = screenWidth - 0.18 * screenWidth;
             if (Math.random() > 0.7) bigStart = 0;
         }
-        if (ypos + 0.1875 * screenWidth > screenHeight) {
+        if (ypos + 0.1 * screenWidth > screenHeight) {
             ypos = 0;
             if (Math.random() > 0.7) bigStart = 0;
         }
         if (ypos < 0) {
-            ypos = screenHeight - 0.1875 * screenWidth;
+            ypos = screenHeight - 0.1 * screenWidth;
             if (Math.random() > 0.7) bigStart = 0;
         }
         if (player.getCurrentTime() > 48.7 && !done) {
@@ -131,10 +131,10 @@ function theyDidIt() {
         if (done) {
             let exp = document.getElementById("explosion")
             exp.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
-            exp.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
+            exp.style.marginTop = screenHeight / 1.7 - x.offsetHeight / 3 + "px";
             exp.style.display = "inline-block";
             x.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
-            x.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
+            x.style.marginTop = screenHeight / 1.7 - x.offsetHeight / 3 + "px";
             x.style.transform = "rotate(" + degree + "deg)";
             return;
         }
@@ -163,7 +163,7 @@ function onYouTubeIframeAPIReady() {
     });
     let x = document.getElementById('player');
     x.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
-    x.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
+    x.style.marginTop = screenHeight / 1.7 - x.offsetHeight / 3 + "px";
 }
 
 function leggo(e) {
