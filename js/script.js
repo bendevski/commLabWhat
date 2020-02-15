@@ -130,9 +130,11 @@ function theyDidIt() {
 
         if (done) {
             let exp = document.getElementById("explosion")
-            exp.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
-            exp.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
+            exp.style.marginLeft = screenWidth / 2 - exp.offsetWidth / 2 + "px";
+            exp.style.marginTop = screenHeight / 2 - exp.offsetHeight / 3 + "px";
             exp.style.display = "inline-block";
+            x.style.marginLeft = screenWidth / 2 - x.offsetWidth / 2 + "px";
+            x.style.marginTop = screenHeight / 2 - x.offsetHeight / 3 + "px";
             x.style.transform = "rotate(" + degree + "deg)";
             return;
         }
